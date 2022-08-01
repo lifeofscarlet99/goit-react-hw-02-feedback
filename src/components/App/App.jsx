@@ -11,16 +11,18 @@ class App extends Component {
     bad: 0,
   };
 
-  handleClickButton = e => {
-    const option = e.target.name;
+  // handleClickButton = e => {
+  //   const option = e.target.name;
 
-    // if (option) {
+  //   if (option) {
+  //     this.setState(prevState => ({ [option]: prevState[option] + 1 }));
+  //   }
+  // };
+  handleClickButton = option => {
     this.setState(prevState => {
       return { [option]: prevState[option] + 1 };
     });
-    // }
   };
-
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
