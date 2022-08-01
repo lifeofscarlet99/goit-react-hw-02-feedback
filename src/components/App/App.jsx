@@ -50,10 +50,7 @@ class App extends Component {
       <div className={css.container}>
         <div className={css.wrapper}>
           <Section title="Please leave feedback">
-            <FeedbackOptions
-              options={options}
-              onLeaveFeedback={handleClickButton}
-            />
+            <FeedbackOptions options={options} onClick={handleClickButton} />
           </Section>
 
           <Section title="Statistics">
